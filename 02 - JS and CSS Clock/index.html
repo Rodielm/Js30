@@ -10,9 +10,13 @@
 
   <div class="clock">
     <div class="clock-face">
-      <div class="hand hour-hand"></div>
-      <div class="hand min-hand"></div>
-      <div class="hand second-hand"></div>
+      <div class="twelve clockHour">12</div>
+      <div class="three clockHour">3</div>
+      <div class="six clockHour">6</div>
+      <div class="nine clockHour">9</div>
+      <div class="hand hour-hand "></div>
+      <div class="hand min-hand "></div>
+      <div class="hand second-hand "></div>
     </div>
   </div>
 
@@ -60,13 +64,50 @@
     .hand {
       width: 50%;
       height: 6px;
-      background: black;
+      background: white;
       position: absolute;
       top: 50%;
       transform-origin: 100%;
       transform: rotate(90deg);
       transition: all 0.05s;
       transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .clockHour{
+     font-size: 50px;
+     font-family: 'Courier New', Courier, monospace;
+     color: #EFEFEF;
+     text-shadow: 2px 2px 5px black;
+    }
+
+    handShadow{
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .twelve{
+      position: relative;
+      bottom:4%
+    }
+
+    .three{
+      position: absolute;
+      top:46%;
+      width: 100%;
+      left: 51%;
+    }
+
+    .nine{
+      position: absolute;
+      top:46%;
+      width: 100%;
+      right: 51%;
+    }
+
+    .six{
+      position: absolute;
+      width: 100%;
+      bottom:-6%;
     }
   </style>
 
