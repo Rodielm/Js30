@@ -152,7 +152,9 @@
         this.classList.toggle('open-active');
       }
     }
+    // open the flex 
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    // See the up and down words. 
     panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
   </script>
 
